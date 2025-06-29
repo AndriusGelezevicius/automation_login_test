@@ -7,6 +7,8 @@ class LoginPage:
         self.password_field = (By.ID, "password")
         self.submit_button = (By.ID, "submit")
 
+    def open(self, url):
+        self.driver.get(url)
     def enter_username(self, username):
         self.driver.find_element(*self.username_field).send_keys(username)
 

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class SuccessPage:
-    def __init__(self, driver):
+    def __init__(self, driver): # driver - kad klasė galėtų atlikti veiksmus puslapyje
         self.driver = driver
         self.message_header = (By.TAG_NAME, "h1")
         self.logout_button = (By.LINK_TEXT, "Log out")
