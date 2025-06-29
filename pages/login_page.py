@@ -15,5 +15,11 @@ class LoginPage:
     def enter_password(self, password):
         self.driver.find_element(*self.password_field).send_keys(password)
 
-    def click_submit(self, submit):
+    def click_submit(self):
         self.driver.find_element(*self.submit_button).click()
+
+    def is_error_message_displayed(self):
+        return self.driver.find_element(By.ID, "error").is_displayed()
+    def get_error_message(self):
+        return self.driver.find_element(By.ID, "error").text
+
