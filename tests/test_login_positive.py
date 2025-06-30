@@ -2,6 +2,9 @@ from pages.login_page import LoginPage
 from pages.success_page import SuccessPage
 
 def test_valid_login(driver):
+    """
+    ALT-1: Positive login test
+    """
     login_page = LoginPage(driver)
     login_page.open("https://practicetestautomation.com/practice-test-login/")
     login_page.enter_username("student")

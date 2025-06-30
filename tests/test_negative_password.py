@@ -1,6 +1,9 @@
 from pages.login_page import LoginPage
 
-def test_invalid_username(driver):
+def test_invalid_password(driver):
+    """
+    ALT-4: Invalid password test
+    """
     login_page = LoginPage(driver)
     login_page.open("https://practicetestautomation.com/practice-test-login/")
     login_page.enter_username("student")
